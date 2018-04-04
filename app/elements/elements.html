@@ -1,0 +1,26 @@
+<div id="page-wrapper">
+    <div id="myDialogWindow"></div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Elements Page</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showContent('VR')">VR</button>
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showContent('Smell')">Smell</button>
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showContent('AR')">AR</button>
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showContent('Touch 3D')">Touch 3D</button>
+            <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showContent('Print 3D')">Print 3D</button>
+        </div>
+        <div class="col-sm-8" ng-hide="!vm.showButton">
+            <div id="toolbar"> <button id="uploadBtn" class="btn btn-default btn-lg btn-block" ng-click="vm.btnClickHandler(e)"><span>+Add {{vm.element_type}} Content</span></button> </div>
+
+            <div id="contentGrid"></div>
+        </div>
+    </div>
+
+    <!-- /#page-wrapper -->
+</div>

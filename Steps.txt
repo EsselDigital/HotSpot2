@@ -1,0 +1,61 @@
+ 
+Video Annotator
+
+1. Start vagrant
+
+   cd ~/Documents/dev
+   vagrant up
+
+
+
+ 2.  Download CI
+ 	codeigniter 3.1.4 (latest as of May 2017)
+
+
+Copy unzipped file to 
+/Documents/dev/web/videoant
+
+
+ http://192.168.33.22/videoant
+
+
+3. Install HMVC
+https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc
+
+Modular Extensions installation
+Start with a clean CI install
+Set $config[‘base_url’] correctly for your installation
+Access the URL /index.php/welcome => shows Welcome to CodeIgniter
+Drop Modular Extensions third_party files into the CI 2.0 application/third_party directory
+Drop Modular Extensions core files into application/core, the MY_Controller.php file is not required unless you wish to create your own controller extension
+Access the URL /index.php/welcome => shows Welcome to CodeIgniter
+Create module directory structure application/modules/welcome/controllers
+Move controller application/controllers/welcome.php to application/modules/welcome/controllers/welcome.php
+Access the URL /index.php/welcome => shows Welcome to CodeIgniter
+Create directory application/modules/welcome/views
+Move view application/views/welcome_message.php to application/modules/welcome/views/welcome_message.php
+Access the URL /index.php/welcome => shows Welcome to CodeIgniter
+
+
+If error, Message: Call to undefined method MY_Loader::_ci_object_to_array()
+http://stackoverflow.com/questions/41557760/codeigniter-hmvc-object-to-array-error
+
+In application/third_party/MX/Loader.php you can do the following...
+
+Under public function view($view, $vars = array(), $return = FALSE) Look for... (Line 300)
+
+return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return));
+Replace this with
+
+if (method_exists($this, '_ci_object_to_array'))
+{
+        return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return));
+} else {
+        return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
+}
+
+
+3. Setup Angular and Kendo UI
+
+
+

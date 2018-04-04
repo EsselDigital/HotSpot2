@@ -1,0 +1,77 @@
+<!-- Youtube plugin -->
+<div id="page-wrapper">
+    <div id="myDialogWindow"></div>
+    <span id="notification"></span>
+    <div class="row">
+        <div class="col-lm-12" style="padding: 0 20px">
+            <h4 class="page-header">{{vm.title}}
+            </h4>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-8">
+
+                        <video id="my-video" class="video-js vjs-16-9" controls preload="auto" height="264" width="640" data-setup='{"techOrder": ["html5", "youtube", "flash", "hls"]}'>
+
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+
+
+                    </div>
+                    <div class="col-sm-4">
+                        <span id="time_count"></span>
+                        <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showDialog('VR')">VR</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showDialog('Smell')">Smell</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showDialog('AR')">AR</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showDialog('Touch 3D')">Touch 3D</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block" ng-click="vm.showDialog('Print 3D')">Print 3D</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel-body">
+                <div id="grid"></div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+
+<script id="deleteTemplate" type="text/x-kendo-template">
+    <div class="delete-hotspot">
+        <img src="resources/assets/images/error-icon.png" />
+        <h4>#= title #</h4>
+        <p>#= message #</p>
+    </div>
+</script>
+
+<script id="errorTemplate" type="text/x-kendo-template">
+    <div class="wrong-pass">
+        <img src="resources/assets/images/user-avatar-02.png" />
+        <h4>#= title #</h4>
+        <p>#= message #</p>
+    </div>
+</script>
+
+<script id="addTemplate" type="text/x-kendo-template">
+    <div class="add-hotspot">
+        <img src="resources/assets/images/success-icon.png" />
+        <h4>#= title #</h4>
+        <p>#= message #</p>
+    </div>
+</script>

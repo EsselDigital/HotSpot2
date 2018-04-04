@@ -1,0 +1,525 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+/*!
+ * Start Bootstrap - SB Admin 2 v3.3.7+1 (http://startbootstrap.com/template-overviews/sb-admin-2)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  background-color: #f8f8f8;
+}
+#wrapper {
+  width: 100%;
+}
+#page-wrapper {
+/*  padding: 0 15px;*/
+  min-height: 568px;
+  background-color: white;
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 24px 0px 0px 20px;
+  width: auto;
+}
+
+.navbar.navbar-default {
+    background-color: #B8BFC8;
+    border-color: #e7e7e7;
+    height: 80px;
+}
+
+@media (min-width: 768px) {
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 250px;
+ /*   padding: 0 30px;*/
+    padding-left:15px;
+    border-left: 1px solid #e7e7e7;
+  }
+}
+.navbar-top-links {
+  margin-right: 0;
+}
+.navbar-top-links li {
+  display: inline-block;
+}
+.navbar-top-links li:last-child {
+  margin-right: 15px;
+}
+.navbar-top-links li a {
+  padding: 15px;
+  min-height: 50px;
+}
+.navbar-top-links .dropdown-menu li {
+  display: block;
+}
+.navbar-top-links .dropdown-menu li:last-child {
+  margin-right: 0;
+}
+.navbar-top-links .dropdown-menu li a {
+  padding: 3px 20px;
+  min-height: 0;
+}
+.navbar-top-links .dropdown-menu li a div {
+  white-space: normal;
+}
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+  width: 310px;
+  min-width: 0;
+}
+.navbar-top-links .dropdown-messages {
+  margin-left: 5px;
+}
+.navbar-top-links .dropdown-tasks {
+  margin-left: -59px;
+}
+.navbar-top-links .dropdown-alerts {
+  margin-left: -123px;
+}
+.navbar-top-links .dropdown-user {
+  right: 0;
+  left: auto;
+}
+
+
+.nav > li > a:hover,.nav > li > a:focus{
+  background-color: #314652;
+}
+.sidebar .sidebar-nav.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar .sidebar-search {
+  padding: 15px;
+}
+.sidebar ul li {
+  border-bottom: 1px solid #e7e7e7;
+}
+.sidebar ul li a.active {
+  background-color: #eeeeee;
+}
+li .game-item:hover{
+  background-color: green;
+}
+.sidebar .arrow {
+  float: right;
+}
+.sidebar .fa.arrow:before {
+  content: "\f104";
+}
+.sidebar .active > a > .fa.arrow:before {
+  content: "\f107";
+}
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+  border-bottom: none !important;
+}
+.sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
+.sidebar .nav-third-level li a {
+  padding-left: 52px;
+}
+#sideBar {
+  background-color: #EEEFF1;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    /*margin-top: 51px;*/
+  }
+  .navbar-top-links .dropdown-messages,
+  .navbar-top-links .dropdown-tasks,
+  .navbar-top-links .dropdown-alerts {
+    margin-left: auto;
+  }
+}
+.btn-outline {
+  color: inherit;
+  background-color: transparent;
+  transition: all .5s;
+}
+.btn-primary.btn-outline {
+  color: #428bca;
+}
+.btn-success.btn-outline {
+  color: #5cb85c;
+}
+.btn-info.btn-outline {
+  color: #5bc0de;
+}
+.btn-warning.btn-outline {
+  color: #f0ad4e;
+}
+.btn-danger.btn-outline {
+  color: #d9534f;
+}
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+  color: white;
+}
+.chat {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chat li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #999999;
+}
+.chat li.left .chat-body {
+  margin-left: 60px;
+}
+.chat li.right .chat-body {
+  margin-right: 60px;
+}
+.chat li .chat-body p {
+  margin: 0;
+}
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+  margin-right: 5px;
+}
+.chat-panel .panel-body {
+  height: 350px;
+  overflow-y: scroll;
+}
+.login-panel {
+  margin-top: 25%;
+}
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  background: transparent;
+}
+table.dataTable thead .sorting_asc:after {
+  content: "\f0de";
+  float: right;
+  font-family: fontawesome;
+}
+table.dataTable thead .sorting_desc:after {
+  content: "\f0dd";
+  float: right;
+  font-family: fontawesome;
+}
+table.dataTable thead .sorting:after {
+  content: "\f0dc";
+  float: right;
+  font-family: fontawesome;
+  color: rgba(50, 50, 50, 0.5);
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ddd;
+  background-color: #eee !important;
+}
+.show-grid {
+  margin: 15px 0;
+}
+.huge {
+  font-size: 40px;
+}
+.panel-green {
+  border-color: #5cb85c;
+}
+.panel-green > .panel-heading {
+  border-color: #5cb85c;
+  color: white;
+  background-color: #5cb85c;
+}
+.panel-green > a {
+  color: #5cb85c;
+}
+.panel-green > a:hover {
+  color: #3d8b3d;
+}
+.panel-red {
+  border-color: #d9534f;
+}
+.panel-red > .panel-heading {
+  border-color: #d9534f;
+  color: white;
+  background-color: #d9534f;
+}
+.panel-red > a {
+  color: #d9534f;
+}
+.panel-red > a:hover {
+  color: #b52b27;
+}
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+.panel-yellow > .panel-heading {
+  border-color: #f0ad4e;
+  color: white;
+  background-color: #f0ad4e;
+}
+.panel-yellow > a {
+  color: #f0ad4e;
+}
+.panel-yellow > a:hover {
+  color: #df8a13;
+}
+.video-list {
+  border:none;
+  background-color:transparent;
+  padding-top: 25px;
+  padding-right: 15px;
+}
+.video-list .panel-body {
+    padding: 15px 0;
+}
+
+.game-list-thumbs{}
+.game-list-thumbs > li  img.icon{
+    box-shadow: 2px 2px 3px #888888;
+}
+
+.game-list-thumbs .gametitle{
+ 
+  font-size: 0.9em;
+  left: 60px;
+  line-height: 1em;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 15px;
+  transition:all 200ms ease;
+}
+.nav >li > a:hover .gametitle,.nav >li > a:focus .gametitle{
+  color:#fff;
+}
+/*
+Sub nav
+*/
+.nav.navbar-nav li a {
+  color:#222;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav.navbar-nav li a:hover {
+  color:white;
+  background-color: transparent;
+}
+
+.game-list-thumbs .views{
+  font-size: 0.9em;
+  left: 60px;
+  line-height: 13px;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 30px;
+  color: #4EB900;
+}
+.game-list-thumbs .followers{
+  font-size: 0.9em;
+  left: 144px;
+  line-height: 28px;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 30px;
+  color:#F07500;
+
+}
+
+.game-list-thumbs .views img,.game-list-thumbs .followers img {
+  height:28px;
+  padding:0 5px 8px; 
+}
+.video-list-thumbs{}
+.video-list-thumbs > li{
+    margin-bottom:12px;
+}
+.video-list-thumbs > li:last-child{}
+.video-list-thumbs > li > a{
+  display:block;
+  position:relative;
+  background-color: #EEEFF1;
+  color: #fff;
+  padding: 8px 0;
+  border-radius:3px;
+  transition:all 500ms ease-in-out;
+  border-radius:4px
+}
+.video-list-thumbs > li > a:hover{
+  box-shadow:0 2px 5px rgba(0,0,0,.3);
+  text-decoration:none
+}
+.video-list-thumbs h2{
+  bottom: 0;
+  font-size: .9em;
+  color:#aaa;
+  padding: 0 5px;
+ /* height: 33px;
+  margin: 8px 0 0;*/
+}
+.video-list-thumbs .glyphicon-play-circle{
+    font-size: 60px;
+    opacity: 0.6;
+    position: absolute;
+    right: 39%;
+    top: 31%;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    transition:all 500ms ease-in-out;
+}
+.video-list-thumbs > li > a:hover .glyphicon-play-circle{
+  color:#fff;
+  opacity:1;
+  text-shadow:0 1px 3px rgba(0,0,0,.8);
+}
+.video-list-thumbs .duration{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  left: 12px;
+  line-height: 13px;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 12px;
+    transition:all 500ms ease;
+}
+
+.video-list-thumbs > li > a:hover .duration{
+  background-color:#000;
+}
+
+.video-list-thumbs .playername{
+  color: #333;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  left: 50px;
+  line-height: 13px;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 12px;
+  transition:all 500ms ease;
+}
+
+.video-list-thumbs .gametitle{
+  color: #555;
+  font-size: 0.9em;
+  left: 50px;
+  line-height: 1em;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 32px;
+  transition:all 500ms ease;
+}
+
+.video-list-thumbs .avatar{
+
+  left: 8px;
+  line-height: 13px;
+  padding: 2px 3px 1px;
+  position: absolute;
+  top: 12px;
+  transition:all 500ms ease;
+}
+.video-list-thumbs .views{
+  font-size: 0.8em;
+  right: 12px;
+  line-height: 13px;
+  padding: 10px 3px 1px;
+  position: absolute;
+  color:#4EB900;
+  top: 20px;
+  transition:all 500ms ease;
+}
+
+.video-list-thumbs .avatar > img{
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 30px; /* Saf3+, Chrome */
+  border-radius: 30px; /* Opera 10.5, IE 9 */
+  /*-moz-border-radius: 30px;  Disabled for FF1+ */
+}
+
+.video-list-thumbs > li > a > img {
+
+  margin: 50px 0 0;
+}
+

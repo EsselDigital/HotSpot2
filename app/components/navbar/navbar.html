@@ -1,0 +1,89 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" ui-sref="home"><img src="resources/assets/images/z5x_title_logo2.png" title="Video Annotator"></a>
+
+    </div>
+
+    <div id="myUploadWindow"></div>
+    <div id="myLoginWindow"></div>
+    <div id="myRegisterWindow"></div>
+    <div id="myForgetPasswordWindow"></div>
+    <!-- /.navbar-header -->
+    <div ng-controller="navbarCtrl">
+        <ul class="nav navbar-top-links navbar-right " style="padding-right: 50px; padding-top: 10px">
+
+            <li class="sidebar-search hidden">
+                <div class="input-group">
+                    <input type="text" ng-model="main.searchText" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+
+            <li class="" style="padding:10px">
+
+                <!--  ng-show="{{vm.showGoAdmin}} -->
+                <a id="showGoAdmin" ng-cloak class="btn btn-primary " ng-show="vm.showGoAdmin" ui-sref="admin" ng-click="vm.goAdmin()">
+                    <i class="fa fa-arrow-right fa-fw"></i>Go Admin
+                </a>
+                <!--   ng-show="{{!!vm.showGoPortal}}" -->
+                <a id="showGoPortal" class="btn btn-primary" ng-show="vm.showGoPortal" ui-sref="home" ng-click="vm.goPortal()">
+                    <i class="fa fa-arrow-left fa-fw"></i>BACK TO Homepage
+                </a>
+            </li>
+            <li>
+                <!--
+            <a ui-sref="auth.login" ng-show="!user">
+                <i class="fa fa-sign-in fa-fw"></i> Login
+            </a>-->
+                <!--<div ng-controller="acmeNavbar">-->
+                <a href="#" id="login" ng-click="vmn.loginHandler(e)" ng-model="loginUser" ng-hide="loginUser"><i class="fa fa-sign-in fa-fw"></i>Login</a>
+                <!--</div>-->
+
+            </li>
+            <li>
+                <a href="#" id="register" ng-click="vmn.registerHandler(e)" ng-model="loginUser" ng-hide="loginUser"><i class="fa fa-sign-in fa-fw"></i>Register</a>
+            </li>
+            <li style="padding: 10px">
+                <button type="button" class="btn btn-info btn-lg" ng-click="vmn.btnUploadHandler(e)" title="upload"><i class="fa fa-upload fa-fw aria-hidden="true""></i> Upload</button>
+            </li>
+            <!-- /.dropdown -->
+            <!--
+            <li class=""><span style="color:#23527C; text-align: right"><label id="curUser" ng-model="loginUser" ng-hide="!loginUser" >{{loginUser}}</lable></span>
+            </li>
+-->
+            <li class="dropdown ">
+
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#" id="logout" ng-click="vmn.logoutHandler(e)" ng-hide="!loginUser"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+    </div>
+    <!-- /.navbar-top-links -->
+
+
+    <!-- /.navbar-static-side -->
+</nav>
