@@ -17,20 +17,15 @@
 
             .state('Landing', {
                 url: '/',
-                templateUrl: 'app/main/main.html',
-                controller: 'MainController',
-                controllerAs: 'main',
-                resolve: {
-                    loginUserInfo: function(DataService) {
-                        return DataService.loginUserInfo();
-                    }
-                }
+                templateUrl: 'app/dashboard/dashboard.html',
+                controller: 'DashboardController',
+                controllerAs: 'dashboard'
             })
             .state('home', {
                 url: '/home',
-                templateUrl: 'app/home/home.html',
-                controller: 'HomeController',
-                controllerAs: 'vm',
+             templateUrl: 'app/dashboard/dashboard.html',
+                controller: 'DashboardController',
+                controllerAs: 'dashboard'
             })
             /*.state('login', {
                 url: '/',

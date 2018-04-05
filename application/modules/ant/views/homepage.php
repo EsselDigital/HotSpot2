@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      <script src="app/components/sidebar/sidebar-directive.js"></script> 
     <script src="app/main/main-controller.js"></script> 
     <!--<script src="app/login/login-controller.js"></script>-->
-    <script src="app/home/home-controller.js">
+    <script src="app/home/home-controller.js"></script> 
     <script src="app/dashboard/dashboard-controller.js"></script> 
     <script src="app/home/home-controller.js"></script> 
     <script src="app/videos/videos-controller.js"></script> 
